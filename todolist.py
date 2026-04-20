@@ -2,8 +2,6 @@ import streamlit as st
 
 st.title("📝 TODOアプリ")
 
-tasks = []
-
 if "tasks" not in st.session_state:
    st.session_state.tasks = []
 
@@ -13,4 +11,5 @@ if st.button("追加"):
 
 
 st.write("### タスク一覧")
-st.write(st.session_state.tasks)
+for i, t in enumerate(st.session_state.tasks):
+   st.checkbox(t, key=i)
