@@ -5,7 +5,7 @@ st.title("📝 TODOアプリ")
 if "tasks" not in st.session_state:
    st.session_state.tasks = []
 
-task = st.text_imput("タスクを入力")
+task = st.text_input("タスクを入力")
 if st.button("追加"):
    st.session_state.tasks.append(task)
 
